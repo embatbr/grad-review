@@ -26,6 +26,7 @@ Review of important topics (algorithms and data structures, operanting systems a
 - topcoder.com (pays to solve challenges)
 - spoj.com
 - hackerearth.com
+- kaggle.com
 
 
 ### e-Learning
