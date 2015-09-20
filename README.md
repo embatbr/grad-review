@@ -7,6 +7,7 @@ Review of important topics (algorithms and data structures, operanting systems a
 
 - C/C++
 - Algorithms and Data Structure
+- Logic
 - Computer Architecture
 - Operating Systems
 - Networks
