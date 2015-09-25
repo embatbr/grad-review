@@ -13,9 +13,19 @@ void print_sequence(int sequence[], int length)
 }
 
 
-void insertion_sort_asc()
+int higher(int a, int b)
 {
-    int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
+    return a > b;
+}
+
+int lower(int a, int b)
+{
+    return a < b;
+}
+
+
+void insertion_sort(int *sequence, int (*test)(int, int))
+{
     print_sequence(sequence, LENGTH);
 
     int j;
@@ -23,7 +33,7 @@ void insertion_sort_asc()
     {
         int key = sequence[j];
         int i = j - 1;
-        while((i >= 0) && (sequence[i] > key))
+        while((i >= 0) && test(sequence[i], key))
         {
             sequence[i + 1] = sequence[i];
             i--;
@@ -35,26 +45,16 @@ void insertion_sort_asc()
     print_sequence(sequence, LENGTH);
 }
 
+void insertion_sort_asc()
+{
+    int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
+    insertion_sort(sequence, &higher);
+}
+
 void insertion_sort_desc()
 {
     int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
-    print_sequence(sequence, LENGTH);
-
-    int j;
-    for(j = 1; j < LENGTH; j++)
-    {
-        int key = sequence[j];
-        int i = j - 1;
-        while((i >= 0) && (sequence[i] < key))
-        {
-            sequence[i + 1] = sequence[i];
-            i--;
-        }
-
-        sequence[i + 1] = key;
-    }
-
-    print_sequence(sequence, LENGTH);
+    insertion_sort(sequence, &lower);
 }
 
 void linear_search(int key)
