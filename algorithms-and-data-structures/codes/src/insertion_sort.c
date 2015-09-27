@@ -57,6 +57,48 @@ void insertion_sort_desc()
     insertion_sort(sequence, &lower);
 }
 
+
+void selection_sort(int *sequence, int (*test)(int, int))
+{
+    print_sequence(sequence, LENGTH);
+
+    int j, jTest;
+    for(j = 0; j < LENGTH; j++)
+    {
+        jTest = j;
+        int i;
+        for(i = j + 1; i < LENGTH; i++)
+        {
+            if(test(sequence[i], sequence[jTest]))
+            {
+                jTest = i;
+            }
+        }
+
+        if(sequence[jTest] != sequence[j])
+        {
+            int temp = sequence[j];
+            sequence[j] = sequence[jTest];
+            sequence[jTest] = sequence[j];
+        }
+    }
+
+    print_sequence(sequence, LENGTH);
+}
+
+void selection_sort_asc()
+{
+    int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
+    insertion_sort(sequence, &higher);
+}
+
+void selection_sort_desc()
+{
+    int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
+    insertion_sort(sequence, &lower);
+}
+
+
 void linear_search(int key)
 {
     int sequence[LENGTH] = {31, 41, 59, 26, 41, 58};
@@ -85,10 +127,20 @@ void linear_search(int key)
 
 int main()
 {
-    printf("asc order:\n");
+    printf("INSERTION SORT\n");
+    printf("ASC order:\n");
     insertion_sort_asc();
-    printf("desc order:\n");
+    printf("DESC order:\n");
     insertion_sort_desc();
+    printf("\n");
+
+    printf("SELECTION SORT\n");
+    printf("ASC order:\n");
+    selection_sort_asc();
+    printf("DESC order:\n");
+    selection_sort_desc();
+    printf("\n");
+
     linear_search(59);
     linear_search(10);
 }

@@ -3,7 +3,9 @@
 
 ## Support
 
-1. Udemy: Comprehensive Algorithms - udemy.com/comprehensive-algorithms
+1. Udemy:
+    1. udemy.com/comprehensive-algorithms
+    2. udemy.com/algorithms-and-data-structures-in-python
 2. Book: Introduction to Algorithms - Cormen, Leiserson, Rivest and Stein
 
 
