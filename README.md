@@ -5,6 +5,9 @@ Review of important topics (algorithms and data structures, operanting systems a
 
 ## TODO
 
+
+### Learnt in grad school
+
 - C/C++
 - Algorithms and Data Structure
 - Logic
@@ -14,6 +17,11 @@ Review of important topics (algorithms and data structures, operanting systems a
 - Probability and Statistics
 - Theory of Computation
 - Database Theory
+
+
+### Should have learned
+
+- Web Development
 
 
 ## Tools
