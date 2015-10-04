@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing JS</title>
+</head>
+<body>
+    <h1>Test from 0 to 4</h1>
+    <script type="text/javascript">
+        "use strict"
+
+        function numbers(){
+            for(var i = 0; i < 5; i++){
+                document.write('<p id="p-' + i + '">number ' + i + '</p>');
+            }
+        }
+
+        numbers();
+
+        var greeting = "hello";
+        var x = greeting.length;
+        document.write('x = ' + x);
+    </script>
+
+    <script type="text/javascript" src="jquery-2.1.4.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var p_0 = $('#p-0');
+            p_0.addClass('redink');
+            var red_p = $('p.redink');
+            red_p.css('color', 'red');
+
+            var p_clk = $('#p-1');
+            p_clk.html('<a href="#">' + p_clk.html() + '</a>');
+            p_clk.click(function(){
+                alert('going nowhere');
+            });
+        });
+    </script>
+</body>
+</html>
