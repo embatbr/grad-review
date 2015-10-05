@@ -9,7 +9,7 @@
         "use strict"
 
         function numbers(){
-            for(var i = 0; i < 5; i++){
+            for(var i = 0; i < 3; i++){
                 document.write('<p id="p-' + i + '">number ' + i + '</p>');
             }
         }
@@ -24,11 +24,11 @@
     <script type="text/javascript" src="jquery-2.1.4.js"></script>
 
     <script type="text/javascript">
+        "use strict"
+
         $(document).ready(function(){
-            var p_0 = $('#p-0');
-            p_0.addClass('redink');
-            var red_p = $('p.redink');
-            red_p.css('color', 'red');
+            $('#p-0').addClass('redink');
+            $('p.redink').css('color', 'red');
 
             var p_clk = $('#p-1');
             p_clk.html('<a href="#">' + p_clk.html() + '</a>');
@@ -36,6 +36,18 @@
                 alert('going nowhere');
             });
         });
+
+        var array_1 = new Array('A', 'B', 'C');
+        var array_2 = ['A', 'B', 'C'];
+        console.log(array_1);
+        array_1[1] = 'A';
+        console.log(array_1);
+        console.log(array_2);
+        console.log(array_1.indexOf('A'))
+
+        for(var i in array_2){
+            $('body').append(array_2[i]);
+        }
     </script>
 </body>
 </html>
